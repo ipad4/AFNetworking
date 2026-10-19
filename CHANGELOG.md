@@ -4,6 +4,20 @@ All notable changes to this project will be documented in this file.
 
 --- 
 
+## [4.0.2-xcprivacy](https://github.com/ipad4/AFNetworking/releases/tag/4.0.2-xcprivacy)（2026-10-19）
+
+### 修复
+
+- 删除两处对私有头文件 `netinet6/in6.h` 的直接引用，使用公开头文件 `netinet/in.h` 提供 IPv6 声明，修复新版 Apple SDK 下的编译错误。
+
+### CocoaPods 集成
+
+```ruby
+pod 'AFNetworking', :git => 'https://github.com/ipad4/AFNetworking.git', :tag => '4.0.2-xcprivacy'
+```
+
+使用 Xcode 27.1 构建时，请将项目及 Pods 的 iOS Deployment Target 设为 15.0 或更高。
+
 ## [4.0.1](https://github.com/AFNetworking/AFNetworking/releases/tag/4.0.1) (04/19/2020)
 Release on Sunday, April 19, 2020. All issues associated with this milestone can be found using this [filter](https://github.com/AFNetworking/AFNetworking/milestone/20?closed=1).
 
